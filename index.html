@@ -1,0 +1,344 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Kopi Senja</title>
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700;800&display=swap">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css">
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<header class="navbar">
+  <a href="#home" class="logo">
+    <i class="fa-solid fa-mug-hot"></i>
+    <span>Kopi</span> Senja
+  </a>
+
+  <nav class="nav-menu" id="navMenu">
+    <a href="#home" class="nav-link active">Home</a>
+    <a href="#menu" class="nav-link">Menu</a>
+    <a href="#promo" class="nav-link">Promo</a>
+    <a href="#gallery" class="nav-link">Gallery</a>
+    <a href="#kontak" class="nav-link">Kontak</a>
+  </nav>
+
+  <div class="nav-actions">
+    <button id="cartBtn" class="icon-btn cart-icon">
+      <i class="fa-solid fa-cart-shopping"></i>
+      <span id="cartCount">0</span>
+    </button>
+
+    <button id="darkModeBtn" class="icon-btn">
+      <i class="fa-solid fa-moon"></i>
+    </button>
+
+    <button id="menuBtn" class="icon-btn menu-btn">
+      <i class="fa-solid fa-bars"></i>
+    </button>
+  </div>
+</header>
+
+<section class="hero section-target" id="home">
+  <div class="hero-content reveal fade-up">
+    <span class="hero-badge">
+      <i class="fa-solid fa-star"></i>
+      Premium Coffee Experience
+    </span>
+
+    <h1>Nikmati Kopi Hangat di Setiap Senja</h1>
+
+    <p>
+      Tempat nyaman buat ngopi, ngobrol, kerja ringan, atau pura-pura produktif sambil buka laptop.
+    </p>
+
+    <div class="hero-buttons">
+      <a href="#menu" class="btn-primary">Lihat Menu</a>
+      <a href="#kontak" class="btn-secondary">Hubungi Kami</a>
+    </div>
+  </div>
+</section>
+
+<section class="stats">
+  <div class="stat-card reveal zoom-in">
+    <i class="fa-solid fa-users"></i>
+    <h2>15K+</h2>
+    <p>Pelanggan</p>
+  </div>
+
+  <div class="stat-card reveal zoom-in">
+    <i class="fa-solid fa-mug-saucer"></i>
+    <h2>25+</h2>
+    <p>Varian Kopi</p>
+  </div>
+
+  <div class="stat-card reveal zoom-in">
+    <i class="fa-solid fa-star"></i>
+    <h2>4.9</h2>
+    <p>Rating</p>
+  </div>
+</section>
+
+<section class="section section-target" id="menu">
+  <div class="section-header reveal fade-up">
+    <span>Menu Favorit</span>
+    <h2>Pilihan Kopi Terbaik</h2>
+    <p>Cari, filter, klik detail, masukin cart. Akhirnya web ini punya fungsi, bukan cuma gaya doang.</p>
+  </div>
+
+  <div class="menu-tools reveal fade-up">
+    <input type="text" id="searchInput" class="search-input" placeholder="Cari menu kopi...">
+
+    <div class="filter-buttons">
+      <button class="filter-btn active" data-filter="semua">Semua</button>
+      <button class="filter-btn" data-filter="coffee">Coffee</button>
+      <button class="filter-btn" data-filter="milk">Milk Based</button>
+      <button class="filter-btn" data-filter="best">Best Seller</button>
+    </div>
+  </div>
+
+  <div class="menu-grid">
+    <div class="menu-card reveal fade-up"
+      data-category="coffee best"
+      data-name="Espresso"
+      data-price="18000"
+      data-desc="Kopi hitam pekat dengan rasa kuat, cocok buat manusia yang butuh ditampar kafein."
+      data-image="https://images.unsplash.com/photo-1510707577719-ae7c14805e3a?auto=format&fit=crop&w=700&q=80">
+
+      <span class="badge">Best Seller</span>
+      <img src="https://images.unsplash.com/photo-1510707577719-ae7c14805e3a?auto=format&fit=crop&w=700&q=80" alt="Espresso">
+
+      <div class="menu-body">
+        <h3>Espresso</h3>
+        <p>Kopi hitam pekat dengan aroma khas.</p>
+
+        <div class="price-row">
+          <span>Rp18.000</span>
+          <button class="add-cart">
+            <i class="fa-solid fa-cart-shopping"></i>
+            Pesan
+          </button>
+        </div>
+      </div>
+    </div>
+
+    <div class="menu-card reveal fade-up"
+      data-category="milk best"
+      data-name="Cappuccino"
+      data-price="25000"
+      data-desc="Espresso, susu hangat, dan foam lembut. Aman buat yang sok dewasa tapi masih suka creamy."
+      data-image="https://images.unsplash.com/photo-1534778101976-62847782c213?auto=format&fit=crop&w=700&q=80">
+
+      <span class="badge">Best Seller</span>
+      <img src="https://images.unsplash.com/photo-1534778101976-62847782c213?auto=format&fit=crop&w=700&q=80" alt="Cappuccino">
+
+      <div class="menu-body">
+        <h3>Cappuccino</h3>
+        <p>Espresso, susu, dan foam lembut.</p>
+
+        <div class="price-row">
+          <span>Rp25.000</span>
+          <button class="add-cart">
+            <i class="fa-solid fa-cart-shopping"></i>
+            Pesan
+          </button>
+        </div>
+      </div>
+    </div>
+
+    <div class="menu-card reveal fade-up"
+      data-category="milk"
+      data-name="Latte"
+      data-price="24000"
+      data-desc="Kopi susu lembut, ringan, dan creamy. Cocok buat ngopi tanpa sok kuat."
+      data-image="https://images.unsplash.com/photo-1570968915860-54d5c301fa9f?auto=format&fit=crop&w=700&q=80">
+
+      <span class="badge new">New</span>
+      <img src="https://images.unsplash.com/photo-1570968915860-54d5c301fa9f?auto=format&fit=crop&w=700&q=80" alt="Latte">
+
+      <div class="menu-body">
+        <h3>Latte</h3>
+        <p>Kopi susu lembut dan creamy.</p>
+
+        <div class="price-row">
+          <span>Rp24.000</span>
+          <button class="add-cart">
+            <i class="fa-solid fa-cart-shopping"></i>
+            Pesan
+          </button>
+        </div>
+      </div>
+    </div>
+
+    <div class="menu-card reveal fade-up"
+      data-category="milk best"
+      data-name="Kopi Susu Gula Aren"
+      data-price="22000"
+      data-desc="Kopi susu dengan manis legit gula aren. Menu penyelamat sore yang capek sama hidup."
+      data-image="https://images.unsplash.com/photo-1461023058943-07fcbe16d735?auto=format&fit=crop&w=700&q=80">
+
+      <span class="badge promo-badge">Promo</span>
+      <img src="https://images.unsplash.com/photo-1461023058943-07fcbe16d735?auto=format&fit=crop&w=700&q=80" alt="Kopi Susu Gula Aren">
+
+      <div class="menu-body">
+        <h3>Kopi Susu Gula Aren</h3>
+        <p>Kopi susu manis legit gula aren.</p>
+
+        <div class="price-row">
+          <span>Rp22.000</span>
+          <button class="add-cart">
+            <i class="fa-solid fa-cart-shopping"></i>
+            Pesan
+          </button>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="promo section-target" id="promo">
+  <div class="promo-content reveal zoom-in">
+    <span>Promo Senja</span>
+    <h2>Diskon 20% untuk Pembelian Pertama</h2>
+    <p>Ambil promonya sekarang. Dompet masih sedih, tapi minimal nggak meraung.</p>
+    <a href="#menu" class="btn-primary">Pilih Kopi</a>
+  </div>
+</section>
+
+<section class="section section-target" id="gallery">
+  <div class="section-header reveal fade-up">
+    <span>Gallery</span>
+    <h2>Suasana Kopi Senja</h2>
+    <p>Interior, barista, kopi, dan suasana senja. Biar web nggak kosong kayak niat belajar pas Senin pagi.</p>
+  </div>
+
+  <div class="gallery-grid">
+    <img class="reveal zoom-in" src="https://images.unsplash.com/photo-1554118811-1e0d58224f24?auto=format&fit=crop&w=700&q=80" alt="Interior">
+    <img class="reveal zoom-in" src="https://images.unsplash.com/photo-1442512595331-e89e73853f31?auto=format&fit=crop&w=700&q=80" alt="Barista">
+    <img class="reveal zoom-in" src="https://images.unsplash.com/photo-1498804103079-a6351b050096?auto=format&fit=crop&w=700&q=80" alt="Coffee">
+    <img class="reveal zoom-in" src="https://images.unsplash.com/photo-1501339847302-ac426a4a7cbb?auto=format&fit=crop&w=700&q=80" alt="Cafe">
+  </div>
+</section>
+
+<section class="section contact section-target" id="kontak">
+  <div class="section-header reveal fade-up">
+    <span>Kontak</span>
+    <h2>Hubungi Kopi Senja</h2>
+  </div>
+
+  <div class="contact-wrapper">
+    <div class="contact-info reveal slide-left">
+      <h3>Informasi Coffee Shop</h3>
+
+      <div class="info-item">
+        <strong><i class="fa-solid fa-location-dot"></i> Alamat</strong>
+        <p>Jl. Senja Hangat No. 17, Bandung</p>
+      </div>
+
+      <div class="info-item">
+        <strong><i class="fa-brands fa-whatsapp"></i> WhatsApp</strong>
+        <p>0812-3456-7890</p>
+      </div>
+
+      <div class="info-item">
+        <strong><i class="fa-solid fa-envelope"></i> Email</strong>
+        <p>kopisenja@email.com</p>
+      </div>
+
+      <div class="info-item">
+        <strong><i class="fa-solid fa-clock"></i> Jam Buka</strong>
+        <p>09.00 - 22.00 WIB</p>
+      </div>
+    </div>
+
+    <form class="contact-form reveal fade-up">
+      <input type="text" placeholder="Nama kamu" required>
+      <input type="email" placeholder="Email kamu" required>
+      <textarea placeholder="Tulis pesan kamu" required></textarea>
+      <button type="submit">Kirim Pesan</button>
+    </form>
+  </div>
+</section>
+
+<footer class="footer">
+  <div class="footer-grid">
+    <div>
+      <h3><i class="fa-solid fa-mug-hot"></i> <span>Kopi</span> Senja</h3>
+      <p>Coffee shop modern dengan suasana hangat di setiap senja.</p>
+    </div>
+
+    <div>
+      <h4>Navigasi</h4>
+      <a href="#home">Home</a>
+      <a href="#menu">Menu</a>
+      <a href="#promo">Promo</a>
+      <a href="#gallery">Gallery</a>
+    </div>
+
+    <div>
+      <h4>Sosial Media</h4>
+      <a href="#"><i class="fa-brands fa-instagram"></i> Instagram</a>
+      <a href="#"><i class="fa-brands fa-tiktok"></i> TikTok</a>
+      <a href="#"><i class="fa-brands fa-facebook-f"></i> Facebook</a>
+    </div>
+  </div>
+
+  <div class="footer-bottom">
+    <p>&copy; 2026 Kopi Senja. All rights reserved.</p>
+  </div>
+</footer>
+
+<div class="cart-panel" id="cartPanel">
+  <div class="cart-header">
+    <h3>Cart Kopi</h3>
+    <button id="closeCart">
+      <i class="fa-solid fa-xmark"></i>
+    </button>
+  </div>
+
+  <div class="cart-items" id="cartItems"></div>
+
+  <div class="cart-footer">
+    <h4>Total: <span id="cartTotal">Rp0</span></h4>
+    <button id="checkoutBtn">
+      <i class="fa-brands fa-whatsapp"></i>
+      Checkout WhatsApp
+    </button>
+  </div>
+</div>
+
+<div class="modal" id="menuModal">
+  <div class="modal-box">
+    <button id="closeModal" class="close-modal">
+      <i class="fa-solid fa-xmark"></i>
+    </button>
+
+    <img id="modalImage" class="modal-image" src="" alt="">
+
+    <h2 id="modalName"></h2>
+    <p id="modalDesc"></p>
+    <h3 id="modalPrice"></h3>
+
+    <button id="modalAddBtn">
+      <i class="fa-solid fa-cart-shopping"></i>
+      Tambah ke Cart
+    </button>
+  </div>
+</div>
+
+<a href="https://wa.me/6285723673103" class="floating-wa" target="_blank">
+  <i class="fa-brands fa-whatsapp"></i>
+</a>
+
+<button id="backToTop" class="back-to-top">
+  <i class="fa-solid fa-arrow-up"></i>
+</button>
+
+<div id="toast" class="toast"></div>
+
+<script src="script.js"></script>
+</body>
+</html>
